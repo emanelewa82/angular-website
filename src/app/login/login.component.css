@@ -1,0 +1,85 @@
+/*login start*/
+.login .loginImage {
+  width: 100%;
+  height: auto;
+}
+.login .loginImage img{
+   width: 65%;
+  height: 100%;
+}
+/*form start*/
+.loginForm{
+  margin-top: 120px;
+}
+.loginForm form input[type="text"],
+.loginForm form input[type="password"]{
+  padding:20px;
+  border: 1px solid #8b8b8b;
+  border-radius: 0;
+}
+.loginForm form input[type="text"]::placeholder,
+.loginForm form input[type="password"]::placeholder
+{
+  font-size: 1.2rem;
+  color: #b4b4b4;
+  font-family: "Arial Unicode MS";
+  text-transform: capitalize;
+}
+.loginForm form input[type="text"]:hover,
+.loginForm form input[type="text"]:focus,
+.loginForm form input[type="password"]:hover,
+.loginForm form input[type="password"]:focus{
+  border: 1px solid var(--firstColor);
+  box-shadow: none;
+}
+.loginForm form input[type="text"]:focus::placeholder,
+.loginForm form input[type="password"]:focus::placeholder{
+  color: var(--secondColor);
+}
+.loginForm .form-check{
+  display: flex;
+  width: 100%;
+}
+.loginForm .form-check .registration a{
+  color: var(--firstColor);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.loginForm form .submit{
+  color:var(--secondColor);
+  text-transform: uppercase;
+  font-size: 2rem;
+  width: 100%;
+  padding: 5px 20px;
+  border: 1px solid #8b8b8b;
+  position: relative;
+  z-index: 100;
+  margin:  0 auto;
+  display: block;
+   font-weight: 500;
+   margin-top: 70px;
+  border-radius: 3px;
+}
+.loginForm form .submit::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color:var(--firstColor) ;
+  z-index: -1;
+  transition:var(--mainTransition);
+}
+.loginForm form .submit:hover::after{
+  height: 100%;
+  bottom:0;
+}
+.loginForm form .submit:hover{
+  color: white!important;
+  border-color: white;
+  transition-delay:0.2s;
+}
+/*form end*/
+/*login end*/

@@ -1,0 +1,52 @@
+/*navbar*/
+.fixed{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: var(--mainTransition);
+  z-index: 1000;
+}
+.notFixed{
+  position: static;
+  top: 0;
+  width: 100%;
+  transition: var(--mainTransition);
+}
+
+nav{
+  padding: 0;
+}
+.navbar-light .navbar-brand{
+  color:var(--secondColor);
+  font-family: AvengeroRegular-zvgl;
+  font-size: 1.1rem;
+}
+.navbar-light .navbar-brand .fas{
+  color:var( --firstColor);
+  font-size: 1.4rem;
+}
+.navbar-light .navbar-nav .nav-link{
+  color:var(--secondColor);
+  font-weight: bold;
+  padding: 15px;
+  font-size: 1.1rem ;
+  position: relative;
+  overflow: hidden;
+}
+.navbar-light .navbar-nav .nav-item .nav-link::before{
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color:var( --firstColor);
+  left: -100%;
+  top: 0;
+  transition: var(--mainTransition);
+}
+.navbar-light .navbar-nav .nav-item .nav-link:hover::before{
+  left: 0;
+}
+.navbar-light .navbar-nav .nav-item .nav-link:hover{
+  color:var(--firstColor);
+}
+

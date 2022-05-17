@@ -1,0 +1,102 @@
+/*gallery start*/
+.gallery .main_section .block{
+   border: 1px solid #eaeaea;
+  border-radius: 3px;
+  height: 600px;
+  border: 1px solid #eaeaea;
+  position: relative;
+}
+.gallery .main_section .block .img-block{
+  width: 100%;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+.gallery .main_section .block .img-block h3{
+   position: absolute;
+  left: 10%;
+  top: 20%;
+  font-family: AvengeroRegular-zvgl;
+  color: white;
+  font-size: 2.2rem;
+  text-shadow: 2px 2px 8px var(--thierdColor);
+  line-height: 50px;
+  display: none;
+}
+
+.gallery .main_section .block:hover .img-block:before{
+  content: "";
+  left: 0;
+  top: 0;
+  background-color: #04022ab3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.gallery .main_section .block:hover .img-block h3{
+  display: block;
+}
+.gallery .main_section .block .img-block:after{
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-style: solid;
+  border-width: 0 416px 162px 0;
+  border-color: #2f28a100 #ffc10700 #ffffff #00800000;
+  transition: var(--mainTransition);
+}
+.gallery .main_section .block:hover .img-block:after{
+  border-width: 0 0 180px 440px;
+  border-color: #6c63ff00 #ffc10703 #ffffff #00800000;
+}
+.gallery .main_section .block .img-block img{
+  width: 100%;
+  height: 100%;
+}
+.gallery .main_section .block .gallery-details{
+  margin-top: 20px;
+}
+.gallery .main_section .block .gallery-details p{
+  line-height: 10px;
+  font-weight: 500;
+  color: #797979b3;
+  font-size: 1.2rem;
+}
+.gallery .main_section .block .gallery-details button{
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  width: 50%;
+  padding: 10px 20px;
+  font-weight: 500;
+  position: relative;
+  z-index: 100;
+  margin:  40px auto 20px;
+  display: block;
+}
+.gallery .main_section .block .gallery-details button:focus{
+  outline: none;
+  box-shadow: none;
+}
+.gallery .main_section .block .gallery-details button:after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color:var(--thierdColor) ;
+  z-index: -1;
+  transition:var(--mainTransition);
+}
+.gallery .main_section .block .gallery-details button:hover:after{
+  height: 100%;
+  bottom:0;
+}
+.gallery .main_section .block .gallery-details button:hover{
+  color: white!important;
+  border-color: white;
+  transition-delay:0.2s;
+}
+/*gallery end*/

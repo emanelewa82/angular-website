@@ -1,0 +1,28 @@
+
+<!--details start-->
+<section class="articles">
+  <div class="container">
+    <div class="title">
+      <h2>articles Details</h2>
+    </div><!--title articles Details end-->
+    <div class="main_section">
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 100%">
+            <img [src]="specificDetails.urlToImage" class="card-img-top" alt="article image">
+            <div class="card-body">
+              <h5 class="card-title">{{specificDetails.title ? specificDetails.title : "IDE Academy"}}</h5>
+              <div class="par-card">
+                <p class="card-text lead">{{specificDetails.description}}</p>
+              </div>
+              <hr>
+              <a [href]="specificDetails.url" class="btn btn-primary">Go to link</a>
+              <a routerLink="/articles" class="btn btn-primary back">back</a>
+            </div>
+          </div>
+        </div>
+      </div><!--row end-->
+    </div><!--main_section end-->
+  </div><!--container end-->
+</section>
+<!--details end-->

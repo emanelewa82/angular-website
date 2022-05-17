@@ -1,0 +1,106 @@
+/*contact start*/
+.contact .main_section .img-contact h1{
+  color:var(--secondColor);
+  font-family: Autobus-Bold;
+  text-transform: uppercase;
+  font-size: 3.3rem;
+}
+.contact .main_section .img-contact img{
+  width: 95%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.contact .main_section .img-contact a{
+  color:var(--secondColor);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  width: 25%;
+  padding: 5px 20px;
+  font-family: Autobus-Bold;
+  border: 1px solid var(--secondColor);
+  position: relative;
+  z-index: 100;
+  border-radius: 0;
+}
+.contact .main_section .img-contact a::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color:var(--thierdColor) ;
+  z-index: -1;
+  transition:var(--mainTransition);
+}
+.contact .main_section .img-contact a:hover::after{
+  height: 100%;
+  bottom:0;
+}
+.contact .main_section .img-contact a:hover{
+  color: white!important;
+  border-color: white;
+  transition-delay:0.2s;
+}
+/*form*/
+form input,
+form textarea{
+  padding:25px;
+  border: 1px solid #8b8b8b;
+  border-radius: 0;
+}
+form input::placeholder,
+form textarea::placeholder{
+  font-size: 1.2rem;
+  color: #b4b4b4;
+  font-family: "Arial Unicode MS";
+  text-transform: capitalize;
+}
+form input:hover,
+form input:focus,
+form textarea:hover,
+form textarea:focus{
+  border: 1px solid var(--thierdColor);
+  box-shadow: none;
+}
+form input:focus::placeholder,
+form textarea:focus::placeholder{
+  color: var(--secondColor);
+}
+form button{
+  color:var(--secondColor);
+  text-transform: uppercase;
+  font-size: 2rem;
+  width: 100%;
+  padding: 5px 20px;
+  font-weight: 500;
+  border: 1px solid #8b8b8b;
+  position: relative;
+  z-index: 100;
+  margin:  0 auto;
+  display: block;
+  border-radius: 0;
+}
+form button::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color:var(--thierdColor) ;
+  z-index: -1;
+  transition:var(--mainTransition);
+}
+form button:hover::after{
+  height: 100%;
+  bottom:0;
+}
+form button:hover{
+  color: white!important;
+  border-color: white;
+  transition-delay:0.2s;
+}
+
+/*contact end*/

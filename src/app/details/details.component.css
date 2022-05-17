@@ -1,0 +1,11 @@
+.articles .main_section .card .card-body a{
+  width: 100px;
+  background-color: var(--firstColor);
+  box-shadow: none;
+  border: none;
+  outline:none ;
+}
+
+.articles .main_section .card .card-body .back{
+  margin-left: 20px;
+}

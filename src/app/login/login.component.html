@@ -1,0 +1,61 @@
+<!--login start-->
+<section class="login">
+  <div class="container">
+    <div class="title">
+      <h2>login</h2>
+    </div><!--title about-->
+    <div class="main_section">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <div class="loginImage">
+            <img src="../../assets/images/login/login.png" class="img-fluid" alt="login image">
+          </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+          <div class="loginForm">
+            <form (ngSubmit) = "onFormSubmit()" [formGroup] = "formLogin" >
+              <div class="mb-3">
+                <input type="text" formControlName = "inputUser" class="form-control"
+                       id="inputUser" name="inputUser" placeholder="user name" required minlength="8">
+              </div>
+              <!--validators-->
+              <div *ngIf = "inputUser.invalid && (inputUser.touched || inputUser.dirty)" class="text-danger mb-2">
+                <div *ngIf = "inputUser.errors?.['required']">
+                   <i class="fas fa-times"></i>  you can not submit null field
+                </div>
+                 <div *ngIf = "inputUser.errors?.['minlength']">
+                   <i class="fas fa-times"></i> minlength must be 8 chr
+                 </div>
+              </div>
+              <div class="mb-3">
+                <input type="password" formControlName = "inputPass" class="form-control"
+                       id="inputPass" name="inputPass" placeholder="password" required minlength="8">
+              </div>
+              <!--validation-->
+              <div *ngIf = "inputPass.invalid && (inputPass.touched || inputPass.dirty)" class="text-danger">
+                <div *ngIf = "inputPass.errors?.['required']">
+                  <i class="fas fa-times"></i> you can not submit null field
+                </div>
+                <div *ngIf = "inputPass.errors?.['minlength']">
+                  <i class="fas fa-times"></i> minlength must be 8 chr
+                </div>
+              </div>
+              <div class="mb-3 form-check ">
+                <div class="checkbox">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">remember me</label>
+                </div>
+                <div class="registration ms-auto">
+                  <a href="#">registration</a>
+                </div>
+              </div>
+              <button  type="submit" class="btn btn-light submit">sign in</button>
+            </form>
+          </div>
+        </div>
+      </div><!--row end-->
+    </div><!--main_section end-->
+  </div><!--container end-->
+</section> <!--login end-->
+

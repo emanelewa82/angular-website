@@ -1,0 +1,82 @@
+/* You can add global styles to this file, and also import other style files */
+/*global fonts*/
+@font-face {
+  font-family: AvengeroRegular-zvgl;
+  src:url("./assets/fonts/misc/AvengeroRegular-zvgl.ttf");
+}
+@font-face {
+  font-family: Autobus-Bold;
+  src:url("./assets/fonts/Autobus-Bold.ttf");
+}
+/*global css*/
+body{
+  color:var(--secondColor);
+  cursor: auto;
+}
+
+:root{
+  --firstColor:#6c63ff;
+  --secondColor:#3f3d56;
+  --thierdColor:#ffc107;
+  --mainTransition:0.3s
+}
+section{
+  padding: 100px 0;
+}
+input, textarea{
+  border-radius: 3px!important;
+}
+.small_title{
+  position: relative;
+  width: auto;
+  height: 30px;
+}
+.small_title h5{
+  color: var(--firstColor);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+.small_title h5::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 20px solid var(--thierdColor);
+  border-right: 20px solid transparent;
+}
+section .title{
+  border: 2px solid var(--secondColor);
+  color:var(--secondColor);
+  text-transform: uppercase;
+  padding: 10px 30px;
+  width: fit-content;
+  margin: 0 auto 100px;
+  position: relative;
+  font-weight: bold;
+  z-index: 100;
+  border-radius: 3px!important;
+}
+section .title::after{
+  content: "";
+  position: absolute;
+  bottom:0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color:var(--firstColor);
+  transition:var(--mainTransition);
+  z-index: -1;
+}
+section .title:hover::after{
+  height: 100%;
+  bottom:0;
+}
+section .title:hover{
+  color: white!important;
+  border-color: white;
+  transition-delay:0.2s;
+}
+

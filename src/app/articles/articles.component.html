@@ -1,0 +1,30 @@
+<!--articles start-->
+<section class="articles">
+  <div class="container">
+    <div class="title">
+      <h2>articles</h2>
+    </div><!--title articles end-->
+    <div class="main_section">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12"
+             *ngFor= "let article of articlesData ; let i = index">
+          <div class="card" style="width: 22rem;">
+            <img [src]="article.urlToImage" class="card-img-top" alt="article image">
+            <div class="card-body">
+              <h5 class="card-title">{{article.title ? article.title : "IDE Academy"}}</h5>
+              <div class="par-card">
+                <p class="card-text lead">{{article.description}}</p>
+              </div>
+              <hr>
+              <a [routerLink]="['/details/', i]" class="btn btn-primary"> details</a>
+            </div>
+          </div>
+        </div>
+      </div><!--row end-->
+    </div><!--main_section end-->
+  </div><!--container end-->
+</section>
+<!--articles end-->
+
+
+
